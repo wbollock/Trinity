@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Trinity</string>
+    <string name="introText">Hello, and welcome to the Trinity Project!</string>
+    <string name="tutorialText">Start by clicking on a category below</string>
+    <string name="soulButton">Soul</string>
+    <string name="bodyButton">Body</string>
+    <string name="mindButton">Mind</string>
 </resources>
