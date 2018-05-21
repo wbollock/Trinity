@@ -46,34 +46,36 @@
         app:layout_constraintTop_toBottomOf="@+id/trinityValue" />
 
     <Button
-        android:id="@+id/button8"
+        android:id="@+id/bodyButton"
         android:layout_width="241dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="56dp"
         android:layout_marginEnd="103dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="56dp"
+        android:onClick="goToBody"
         android:text="@string/bodyButton"
-        app:layout_constraintBottom_toTopOf="@+id/button9"
+        app:layout_constraintBottom_toTopOf="@+id/soulButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.45"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mindButton" />
 
     <Button
-        android:id="@+id/button9"
+        android:id="@+id/soulButton"
         android:layout_width="241dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="82dp"
         android:layout_marginEnd="103dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
+        android:onClick="goToSoul"
         android:text="@string/soulButton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.45"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button8"
+        app:layout_constraintTop_toBottomOf="@+id/bodyButton"
         app:layout_constraintVertical_bias="1.0" />
 
     <TextView
@@ -84,7 +86,7 @@
         android:layout_marginEnd="214dp"
         android:layout_marginStart="165dp"
         android:layout_marginTop="45dp"
-        android:text="1234"
+        android:text="@string/_1234"
         app:layout_constraintBottom_toTopOf="@+id/mindButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

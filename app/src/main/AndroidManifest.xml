@@ -5,6 +5,7 @@
 
     <application
         android:allowBackup="true"
+        android:fullBackupContent="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
@@ -30,8 +31,9 @@
                     android:pathPattern="/trinity" />
             </intent-filter>
         </activity>
-        <activity android:name=".Mind"></activity>
-
+        <activity android:name=".Mind"/>
+        <activity android:name=".Body"/>
+        <activity android:name=".Soul"/>
         <service
             android:name=".IntentServiceHandler"
             android:enabled="true"
