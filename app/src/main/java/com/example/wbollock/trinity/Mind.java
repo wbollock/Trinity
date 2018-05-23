@@ -1,7 +1,9 @@
 package com.example.wbollock.trinity;
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -32,7 +34,14 @@ public class Mind extends AppCompatActivity {
 
     } // end of oncreate
 
-
+    public void testPoints(View view){
+        // meant to return something that is added/subtracted from Trinity Points via activityfromResult
+        int doingDrugs = -5;
+        Intent returnIntent = getIntent(); // intent object
+        returnIntent.putExtra("doingDrugs", doingDrugs); // returning int
+        setResult(Activity.RESULT_OK, returnIntent);
+        finish();
+    }
 }
 
 
