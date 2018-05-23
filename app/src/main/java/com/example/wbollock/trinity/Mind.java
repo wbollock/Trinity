@@ -32,7 +32,7 @@ public class Mind extends AppCompatActivity {
             Toast.makeText(this, "could not parse", Toast.LENGTH_SHORT).show();
         }
 
-    } // end of oncreate
+    } // end of on create
 
     public void testPoints(View view){
         // meant to return something that is added/subtracted from Trinity Points via activityfromResult

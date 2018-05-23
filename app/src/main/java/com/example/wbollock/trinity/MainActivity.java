@@ -1,7 +1,9 @@
 package com.example.wbollock.trinity;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -47,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == 1) {
             if (resultCode == Activity.RESULT_OK){
-                Toast.makeText(this, "RESULT OK", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Changes Saved", Toast.LENGTH_SHORT).show(); // TODO specify this for doingDrugs instead of all result codes
                 //trinityPoints = trinityPoints + data.getIntExtra("doingDrugs", 1);// get new trinity value
                 trinityPoints =  trinityPoints - 5;
                 trinityValue.setText(String.format("%d", trinityPoints));
@@ -60,6 +62,14 @@ public class MainActivity extends AppCompatActivity {
                 return;
         }
 
+    } // end of onActivityResult
+    public void savePoints(View view){ // saving trinityPoints between app restarts
+        SharedPreferences sharedPref = getSharedPreferences("savedPoints", Context.MODE_PRIVATE); // gives us an object
+        SharedPreferences.Editor editor = sharedPref.edit();
 
+        editor.putString("savedPoints",trinityValue.getText().toString()); // saving textview
+        editor.apply();
     }
+
+
 }
